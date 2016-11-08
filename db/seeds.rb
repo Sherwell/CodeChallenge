@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+# If file not on parent directory, adjust path.
+file = JSON.parse(File.read('../products.json'))
+file["products"].each do |product|
+	Product.create!(product)
+end

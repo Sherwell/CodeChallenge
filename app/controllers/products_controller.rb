@@ -4,8 +4,8 @@ class ProductsController < ApplicationController
 		@products = Product.all.paginate(page: params[:page], per_page: 30)
 	end
 
-	def open_modal
-		@product = Product.find(params[:product_id])
+	def show
+		@product = Product.find(params[:id])
 
 		respond_to do |format|
 			format.js

@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :products, except: [:show, :new, :create] do 
-    get "open_modal"
-  end
+  resources :products, only: [:show, :index]
   resources :shopping_carts, only: [:show, :destroy]
   resources :cart_details, only: [:destroy] do 
     collection do

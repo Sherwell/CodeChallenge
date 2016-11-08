@@ -1,13 +1,10 @@
 == README
 
-⁃ Users can sign up
-⁃ Users can log in
-⁃ Users can view all products in a gridded view
-⁃ Each grid item displays the name of the product, the brand name, the model number and the price
-⁃ Users can click on a product to see details about it in a modal
-⁃ The modal has the same info as the grid view for each product, plus the provided description of the product
-⁃ Users can log out
-⁃ Users can add products to a cart
-⁃ Add to cart buttons should be on the modal for the product
-⁃ Users can view their cart and the items inside
-⁃ Users can delete an item from their cart
+Ruby Version 2.2.1
+
+# Run 'bundle install' to install gems required.
+# Run 'rake db:migrate' to setup database and create schema
+# Have products.json with initial products 1 level outside Project or modify db/seeds.rb accordingly
+# Run 'rake db:seed' to import from products.json to DB
+# Run 'rails s' on terminal to start server
+# Run rspec to run tests

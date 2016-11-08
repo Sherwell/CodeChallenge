@@ -3,10 +3,6 @@ class ShoppingCart < ActiveRecord::Base
   	has_many :products, through: :cart_details
 
 	def cost
-	  	price = 0
-	  	cart_details.each do |cd|
-	  		price += Product.find(cd.product_id).price
-	  	end
-	  	price
+	  	cart_details.inject(0){|sum,cd| sum + cd.product.price}
 	end
 end
