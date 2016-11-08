@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+⁃ Users can sign up
+⁃ Users can log in
+⁃ Users can view all products in a gridded view
+⁃ Each grid item displays the name of the product, the brand name, the model number and the price
+⁃ Users can click on a product to see details about it in a modal
+⁃ The modal has the same info as the grid view for each product, plus the provided description of the product
+⁃ Users can log out
+⁃ Users can add products to a cart
+⁃ Add to cart buttons should be on the modal for the product
+⁃ Users can view their cart and the items inside
+⁃ Users can delete an item from their cart
