@@ -1,0 +1,19 @@
+<h2 style="text-align:center;">Your cart has <%= pluralize(@cart.cart_details.count, "item") %>.</h2>
+
+<%= render @cart.cart_details %>
+
+<div class="row shopping-cart-row">
+	<div class="col-xs-4 col-xs-push-4">
+		<p>Total:</p>
+	</div>
+	<div class="col-xs-3 col-xs-push-4">
+		<p>$<%= @cart.cost %></p>
+	</div>
+	<div class="col-xs-1 col-xs-push-4">
+		<%= link_to "Delete Cart", shopping_cart_path(@cart), method: :delete %>
+	</div>
+</div>
+
+<div style="text-align:center; margin-top: 15px;">
+	<%= link_to "Continue Shopping", products_path %>
+</div>

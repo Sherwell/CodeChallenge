@@ -1,0 +1,23 @@
+<div class="modal fade" id="product-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><%= @product.name %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= @product.brand %></p>
+        <p><%= @product.model %></p>
+        <p>$<%= @product.price %></p>
+        <p><%= @product.desc %></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= form_tag add_cart_details_path, style: "display: inline;" do %>
+          <%= hidden_field_tag :product_id, @product.id %>
+          <%= submit_tag "Add To Cart", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

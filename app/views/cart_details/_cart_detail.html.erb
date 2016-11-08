@@ -1,0 +1,16 @@
+<div class="row shopping-cart-row">
+	<div class="col-xs-4">
+		<p><%= cart_detail.product.name %></p>	
+	</div>
+	<div class="col-xs-4">
+		<p><%= cart_detail.product.brand %> - <%= cart_detail.product.model %></p>	
+	</div>
+	<div class="col-xs-3">
+		<p>$<%= cart_detail.product.price %></p>
+	</div>
+	<div class="col-xs-1">
+		<%= link_to cart_detail_path(cart_detail), method: :delete, data: {confirm: "Are you sure you want to delete #{cart_detail.product.name} from your cart?"} do %>
+			<span class="glyphicon glyphicon-remove"></span>
+		<% end %>
+	</div>
+</div>
